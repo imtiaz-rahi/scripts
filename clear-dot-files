@@ -1,4 +1,5 @@
 #!/bin/bash
+# http://distrowatch.com/weekly.php?issue=20151005#qa
 
 cd ~;
 for i in .[^.]?*; do
