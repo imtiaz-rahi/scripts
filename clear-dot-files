@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd ~;
+for i in .[^.]?*; do
+  find "$i" -depth -atime +365 -type f -delete;
+done
