@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ ! -f "$1" ]; then
+	echo "Usage: $(basename $0) <file.wma> [Album name]"
+	exit 1
+fi
+IN_FILE="$1"
+OUT_FILE="${IN_FILE%%.wma}".ogg
+TOC_FILE="${IN_FILE%%.wma}".toc
+mkfifo soundpipe
+oggenc -b 192 soundpipe -o "$OUT_FILE" > /dev/null 1>&2 &
+mplayer -quiet -ao pcm -aofile soundpipe -vo null -vc dummy "$IN_FILE" 2> /dev/null | grep -e author -e name > "$TOC_FILE"
+rm -f soundpipe
+TITLE=$(cat "$TOC_FILE" | grep " name:" | sed -e 's/ name: //g')
+ARTIST=$(cat "$TOC_FILE" | grep " author:" | sed -e 's/ author: //g')
+ALBUM=""
+[ -n "$2" ] && ALBUM="$2"
+vorbiscomment -a -t "ARTIST=$ARTIST" -t "TITLE=$TITLE" -t "ALBUM=$ALBUM" "$OUT_FILE"
+rm -f "$TOC_FILE"
