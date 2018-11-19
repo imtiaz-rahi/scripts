@@ -1,0 +1,15 @@
+SECRET_FOLDER=~/.ssh/.agent-sessions
+find $SECRET_FOLDER -mtime +1 -exec rm -f {} \;
+# http://rabexc.org/posts/pitfalls-of-ssh-agents
+ssh-add -l &>/dev/null
+if [ "$?" == 2 ]; then
+  SSHAGENT=${SECRET_FOLDER}/ssh-agent-`hostname`
+  test -r ${SSHAGENT} && eval "$(<${SSHAGENT})" >/dev/null
+
+  ssh-add -l &>/dev/null
+  if [ "$?" == 2 ]; then
+    (umask 066; ssh-agent -t 3600 -s > ${SSHAGENT})
+    eval "$(<${SSHAGENT})" >/dev/null
+    ssh-add
+  fi
+fi

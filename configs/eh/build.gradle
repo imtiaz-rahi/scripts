@@ -1,0 +1,170 @@
+buildscript {
+	ext {
+		springBootVersion = '1.4.1.RELEASE'
+		springCloudReleaseTrain = 'Camden.RC1'
+	}
+	repositories {
+		mavenLocal()
+		mavenCentral()
+	}
+	dependencies {
+		classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+		classpath 'com.bmuschko:gradle-docker-plugin:3.0.11'
+	}
+}
+
+plugins {
+	id "net.linguica.maven-settings" version "0.5"
+}
+
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+eclipse { classpath { downloadSources = true } }
+idea { module { downloadSources = true } }
+
+task(genDockerCompose) << {
+	def empowerHubHost = project.properties['empowerHubHost'] ?: "hubtest.365technology.com"
+	def empowerHubPort = project.properties['empowerHubPort'] ?: 8080
+	def empowerHubPortHTTPS = project.properties['empowerHubPortHTTPS'] ?: 8443
+	def activeProfile = project.properties['activeProfile'] ?: "uat"
+
+	def registryProject = project(':registry')
+	def coreProject = project(':core')
+	def connectorPort = registryProject.connectorPortBase
+	
+	copy {
+		from "${rootDir}/docker-compose.yml.template"
+		into "${rootDir}/"
+		rename('docker-compose.yml.template', 'docker-compose.yml')
+		expand([
+				empowerHubHost: empowerHubHost,
+				empowerHubPort: empowerHubPort,
+				empowerHubPortHTTPS: empowerHubPortHTTPS,
+				coreProject: coreProject,
+				registryProject: registryProject
+		])
+	}
+
+	def dcFile = file("${rootDir}/docker-compose.yml")
+
+	subprojects.findAll{ it.name.startsWith('connector-') && !it.name.equals('connector-api') }.each {
+		dcFile.append """
+  # scaling up: docker-compose scale ${it.name}=N
+  ${it.name}:
+    image: ${it.group}/${it.name}:${it.version}
+    restart: always
+    ports:
+      - ${registryProject.connectorPortBase}
+      - 5005
+    links:
+      - registry
+      - elk
+      - redis
+    environment:
+      - VIRTUAL_HOST=${it.name.substring(10)}.${empowerHubHost}
+      - VIRTUAL_PORT=3000
+      - SPRING_PROFILES_ACTIVE=default,docker,${activeProfile}
+"""
+
+	}
+}
+			
+configure(subprojects - subprojects.findAll{ it.name.startsWith('stub-') }) {
+	group = 'com.metafour.empowerhub'
+	version = '1.0.11-SNAPSHOT'
+
+	apply plugin: 'java'
+	apply plugin: 'idea'
+	apply plugin: 'eclipse'
+	apply plugin: 'spring-boot'
+	apply plugin: 'com.bmuschko.docker-remote-api'
+
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+
+	eclipse {
+		classpath { downloadSources = true }
+	}
+
+	idea {
+		module { downloadSources = true }
+	}
+
+	docker {
+	    url = 'http://localhost:4243'
+	    //url = 'http://bdhn8:4243'
+	}
+
+	ext {
+		registryPort = 1111
+		corePort = 2222
+		connectorPortBase = 3000
+		
+		sourceEncoding = 'UTF-8'
+
+		createDockerTasks = { int port ->
+			task setPorts(type: Copy, dependsOn: 'processResources') {
+				from "${sourceSets.main.output.resourcesDir.path}/application.yml.template"
+				into "${sourceSets.main.output.resourcesDir.path}"
+				rename('application.yml.template', 'application.yml')
+				expand([
+					registryPort: registryPort,
+					appPort: port
+				])
+			}
+		
+			jar {
+				dependsOn 'setPorts'
+			}
+		
+			task copyDockerApp(type: Copy, dependsOn: 'assemble') {
+				from "${libsDir}/${project.name}-${project.version}.jar"
+				into "${buildDir}/docker"
+			}
+			
+			task createDockerfile(type: com.bmuschko.gradle.docker.tasks.image.Dockerfile, dependsOn: 'copyDockerApp') {
+				destFile = file("${buildDir}/docker/Dockerfile")
+				from 'frolvlad/alpine-oraclejdk8:slim'
+				maintainer 'Noor Siddique <noor.siddique@metafour.com>'
+				volume '/tmp'
+				addFile "${project.name}-${project.version}.jar", "/app.jar"
+				runCommand "sh -c 'touch /app.jar'"
+				exposePort port
+				//entryPoint 'java', '-Xmx256m', '-Djava.security.egd=file:/dev/./urandom', '-jar', '/app.jar'
+				entryPoint 'java', '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005', '-Xmx256m', '-Djava.security.egd=file:/dev/./urandom', '-jar', '/app.jar' // DEBUG
+			}
+			
+			task buildDockerImage(type: com.bmuschko.gradle.docker.tasks.image.DockerBuildImage, dependsOn: 'createDockerfile'){
+				inputDir = file("${buildDir}/docker")
+				tag = "${project.group}/${project.name}:${project.version}"
+			}
+		}
+		
+	}
+
+	repositories {
+		mavenLocal()
+		maven {
+			credentials {
+				username "$repo2User"
+				password "$repo2Pass"
+			}
+			url "$repo2Url"
+		}
+		mavenCentral()
+		maven {
+			url 'https://repo.spring.io/libs-milestone'
+		}
+	}
+
+	dependencyManagement {
+		imports {
+			mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudReleaseTrain}"
+		}
+	}
+	
+	task wrapper(type: Wrapper) {
+		gradleVersion = '2.14'
+	}
+
+}

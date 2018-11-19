@@ -1,0 +1,24 @@
+apply plugin: 'net.linguica.maven-settings'
+
+import java.lang.invoke.LambdaForm.Compiled
+
+dependencies {
+	compile project(':connector-api')
+	compile project(':stub-encore-client-api')
+
+	compile 'org.springframework.boot:spring-boot-starter-cache'
+	compile 'org.redisson:redisson:3.3.0'
+	compile 'com.github.kstyrc:embedded-redis:0.6'
+
+	compile 'ch.qos.logback:logback-core:1.1.6'
+	compile 'ch.qos.logback:logback-classic:1.1.6'
+
+	compileOnly 'org.projectlombok:lombok:1.16.14'
+	testCompile 'org.springframework.boot:spring-boot-starter-test'
+}
+
+bootRun {
+	systemProperties System.properties
+}
+
+createDockerTasks(connectorPortBase)

@@ -1,0 +1,141 @@
+version: '2'
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+    ports:
+      - 80:80
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    environment:
+      - DEFAULT_HOST=hub.*
+
+  db:
+    image: postgres
+    container_name: db
+    ports:
+      - 5432
+    volumes:
+      - /data
+    environment:
+      - PGDATA=/data
+      - POSTGRES_DB=emphub
+      - POSTGRES_USER=emphubuser
+      - POSTGRES_PASSWORD=emphubpass
+
+  # scaling up: docker-compose scale redis=N
+  # TODO: redis cluster
+  redis:
+    image: redis
+    ports:
+      - 6379
+    volumes:
+      - /data
+
+  redis-commander:
+    image: tenstartups/redis-commander
+    container_name: redis-commander
+    command: --redis-host redis
+    links:
+      - redis:redis
+      - nginx-proxy
+    ports:
+      - 8081
+    environment:
+      - VIRTUAL_HOST=redis-commander.hub.*
+      - VIRTUAL_PORT=8081
+
+  elk:
+    image: com.metafour.empowerhub/elk:0.0.1-SNAPSHOT
+    container_name: elk
+    ports:
+      - 80
+      - 9200
+      - 5514/udp
+      - 4560
+    environment:
+      - VIRTUAL_HOST=elk.hub.*
+      - VIRTUAL_PORT=80
+      
+  registry:
+    image: com.metafour.empowerhub/registry:0.0.1-SNAPSHOT
+    container_name: registry
+    ports:
+      - 1111
+    links:
+      - elk
+    environment:
+      - VIRTUAL_HOST=registry.hub.*
+      - VIRTUAL_PORT=1111
+      
+  core:
+    image: com.metafour.empowerhub/core:0.0.1-SNAPSHOT
+    container_name: core
+    ports:
+      - 2222
+      - 5005:5005
+    links:
+      - registry
+      - db
+      - elk
+      - nginx-proxy
+    environment:
+      - VIRTUAL_HOST=hub.*
+      - VIRTUAL_PORT=2222
+      
+
+  # scaling up: docker-compose scale connector-encore=N
+  connector-encore:
+    image: com.metafour.empowerhub/connector-encore:0.0.1-SNAPSHOT
+    ports:
+      - 3000
+      - 5005
+    links:
+      - registry
+      - elk
+      - redis
+    environment:
+      - VIRTUAL_HOST=encore.hub.*
+      - VIRTUAL_PORT=3000
+
+  # scaling up: docker-compose scale connector-galaxyconnect=N
+  connector-galaxyconnect:
+    image: com.metafour.empowerhub/connector-galaxyconnect:0.0.1-SNAPSHOT
+    ports:
+      - 3000
+      - 5005
+    links:
+      - registry
+      - elk
+      - redis
+    environment:
+      - VIRTUAL_HOST=galaxyconnect.hub.*
+      - VIRTUAL_PORT=3000
+
+  # scaling up: docker-compose scale connector-onebox=N
+  connector-onebox:
+    image: com.metafour.empowerhub/connector-onebox:0.0.1-SNAPSHOT
+    ports:
+      - 3000
+      - 5005
+    links:
+      - registry
+      - elk
+      - redis
+    environment:
+      - VIRTUAL_HOST=onebox.hub.*
+      - VIRTUAL_PORT=3000
+
+  # scaling up: docker-compose scale connector-ticketinghub=N
+  connector-ticketinghub:
+    image: com.metafour.empowerhub/connector-ticketinghub:0.0.1-SNAPSHOT
+    ports:
+      - 3000
+      - 5005
+    links:
+      - registry
+      - elk
+      - redis
+    environment:
+      - VIRTUAL_HOST=ticketinghub.hub.*
+      - VIRTUAL_PORT=3000

@@ -1,0 +1,42 @@
+# https://gist.github.com/pksunkara/988716
+[user]
+	name = Imtiaz Rahi
+	email = imtiaz@metafour.com
+	signingkey = 3A7D5A6732619BB7
+[github]
+	user = imtiaz-m4
+[core]
+	excludesfile = /home/imtiaz/.gitignore
+
+# http://stackoverflow.com/questions/13385690/how-to-use-git-with-gnome-keyring-integration
+# $ git config --global credential.helper /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+# http://stackoverflow.com/questions/5343068/is-there-a-way-to-skip-password-typing-when-using-https-github
+# $ git config --global credential.helper "cache --timeout=3600"
+[credential]
+	helper = cache --timeout=3600
+#[credential]
+#	helper = /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
+[gui]
+	editor = gedit
+[diff]
+	tool = meld
+[merge]
+	tool = meld
+	keepbackup = false
+[push]
+	default = simple
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[alias]
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	co = checkout
+	ci = commit
+[color]
+	ui = auto
+	status = auto
+	branch = auto
+	diff = auto
+[difftool "icdiff"]
+	cmd = icdiff --line-numbers $LOCAL $REMOTE

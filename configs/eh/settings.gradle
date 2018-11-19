@@ -1,0 +1,20 @@
+include 'registry'
+include 'core'
+include 'api-key-auth'
+include 'elk'
+
+// connector modules
+def ignoredConnectors = []
+(file("${rootDir}/connector").list() - ignoredConnectors)
+	.each { 
+		include "connector-${it}"
+		project(":connector-${it}").projectDir = file("connector/${it}")
+	}
+
+// stub modules
+def ignoredStubs = []
+(file("${rootDir}/stubs").list() - ignoredStubs)
+    .each {
+        include "stub-${it}"
+        project(":stub-${it}").projectDir = file("stubs/${it}")
+    }

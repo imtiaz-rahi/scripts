@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-catalog xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-catalog/1.0.0 http://maven.apache.org/xsd/archetype-catalog-1.0.0.xsd"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-catalog/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <archetypes>
+    <archetype>
+      <groupId>org.apache.maven.archetypes</groupId>
+      <artifactId>maven-archetype-webapp</artifactId>
+      <version>1.0</version>
+      <description>webapp</description>
+    </archetype>
+    <archetype>
+      <groupId>org.apache.maven.archetypes</groupId>
+      <artifactId>maven-archetype-quickstart</artifactId>
+      <version>1.1</version>
+      <description>quickstart</description>
+    </archetype>
+    <archetype>
+      <groupId>com.lordofthejars.thymeleafarchetype</groupId>
+      <artifactId>thymeleaf-spring-maven-archetype</artifactId>
+      <version>1.0.0</version>
+      <description>html5form</description>
+    </archetype>
+  </archetypes>
+</archetype-catalog>

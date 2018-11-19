@@ -1,0 +1,22 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+# http://cvuorinen.net/2013/07/installing-sonarqube-with-jenkins-integration-for-a-php-project/
+# https://dzone.com/articles/how-quickly-get-started-sonar
+export SONAR_RUNNER_HOME=/opt/sonar-runner
+PATH=$PATH:$SONAR_RUNNER_HOME/bin
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+PATH="$HOME/.cargo/bin:$PATH"
+
+export PATH
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/imtiaz-rhel/.sdkman"
+[[ -s "/home/imtiaz-rhel/.sdkman/bin/sdkman-init.sh" ]] && source "/home/imtiaz-rhel/.sdkman/bin/sdkman-init.sh"
+

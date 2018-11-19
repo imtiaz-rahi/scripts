@@ -1,0 +1,6 @@
+rootProject.name='netcourier-cloud'
+
+include 'netcourier-cloud-utility'
+include 'netcourier-cloud-dao'
+include 'netcourier-cloud-api'
+include 'netcourier-compare'

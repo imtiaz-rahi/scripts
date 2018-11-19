@@ -1,0 +1,2054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://oss.sonatype.org/content/repositories/appfuse/archetype-catalog.xml -->
+<archetype-catalog xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-catalog/1.0.0 http://maven.apache.org/xsd/archetype-catalog-1.0.0.xsd"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-catalog/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <archetypes>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-ws-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-tapestry-archetype</artifactId>
+      <version>2.1.0-M2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-tapestry-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-tapestry-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-tapestry</artifactId>
+      <version>2.0.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Tapestry implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-tapestry</artifactId>
+      <version>2.0.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Tapestry implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-tapestry</artifactId>
+      <version>2.0-rc1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Tapestry implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-tapestry</artifactId>
+      <version>2.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Tapestry implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-struts-archetype</artifactId>
+      <version>2.1.0-M2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-struts-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-struts-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-struts</artifactId>
+      <version>2.0.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Struts implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-struts</artifactId>
+      <version>2.0.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Struts implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-struts</artifactId>
+      <version>2.0-rc1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Struts implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-struts</artifactId>
+      <version>2.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Struts implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-spring-archetype</artifactId>
+      <version>2.1.0-M2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-spring-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-spring-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-spring</artifactId>
+      <version>2.0.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Spring MVC implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-spring</artifactId>
+      <version>2.0.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Spring MVC implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-spring</artifactId>
+      <version>2.0-rc1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Spring MVC implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-spring</artifactId>
+      <version>2.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Spring MVC implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-jsf-archetype</artifactId>
+      <version>2.1.0-M2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-jsf-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-jsf-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-jsf</artifactId>
+      <version>2.0.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's JSF implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-jsf</artifactId>
+      <version>2.0.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's JSF implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-jsf</artifactId>
+      <version>2.0-rc1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's JSF implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-jsf</artifactId>
+      <version>2.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's JSF implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-wicket-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-wicket-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-tapestry-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-tapestry-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-struts-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-struts-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-stripes-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-stripes-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-security-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-security-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-freemarker-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-freemarker-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-jsf-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-jsf-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-core-archetype</artifactId>
+      <version>2.1.0-M2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-core-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-core-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-core</artifactId>
+      <version>2.0.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a backend (Managers, DAOs and Web Services)
+        application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-core</artifactId>
+      <version>2.0.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a backend (Managers, DAOs and Web Services)
+        application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-core</artifactId>
+      <version>2.0-rc1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a backend (Managers, DAOs and Web Services)
+        application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-core</artifactId>
+      <version>2.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a backend (Managers, DAOs and Web Services)
+        application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-tapestry-archetype</artifactId>
+      <version>2.1.0-M2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-tapestry-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-tapestry-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-tapestry</artifactId>
+      <version>2.0.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-tapestry</artifactId>
+      <version>2.0.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-tapestry</artifactId>
+      <version>2.0-rc1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-tapestry</artifactId>
+      <version>2.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-struts-archetype</artifactId>
+      <version>2.1.0-M2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-struts-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-struts-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-struts</artifactId>
+      <version>2.0.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-struts</artifactId>
+      <version>2.0.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-struts</artifactId>
+      <version>2.0-rc1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-struts</artifactId>
+      <version>2.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-spring-archetype</artifactId>
+      <version>2.1.0-M2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-spring-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-spring-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-spring</artifactId>
+      <version>2.0.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-spring</artifactId>
+      <version>2.0.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-spring</artifactId>
+      <version>2.0-rc1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-spring</artifactId>
+      <version>2.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-jsf-archetype</artifactId>
+      <version>2.1.0-M2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-jsf-archetype</artifactId>
+      <version>2.1.0-M1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-jsf-archetype</artifactId>
+      <version>2.1.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-jsf</artifactId>
+      <version>2.0.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-jsf</artifactId>
+      <version>2.0.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-jsf</artifactId>
+      <version>2.0-rc1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-jsf</artifactId>
+      <version>2.0</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-tapestry</artifactId>
+      <version>2.0-m5</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Tapestry implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-tapestry</artifactId>
+      <version>2.0-m4</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Tapestry implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-tapestry</artifactId>
+      <version>1.0-m3</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Tapestry implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-tapestry</artifactId>
+      <version>1.0-m2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Tapestry implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-struts</artifactId>
+      <version>2.0-m5</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Struts implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-struts</artifactId>
+      <version>2.0-m4</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Struts implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-struts</artifactId>
+      <version>1.0-m3</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Struts implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-struts</artifactId>
+      <version>1.0-m2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Struts implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-spring</artifactId>
+      <version>2.0-m5</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Spring MVC implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-spring</artifactId>
+      <version>2.0-m4</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Spring MVC implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-spring</artifactId>
+      <version>1.0-m3</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Spring MVC implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-spring</artifactId>
+      <version>1.0-m2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Spring MVC implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-jsf</artifactId>
+      <version>2.0-m5</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's JSF implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-jsf</artifactId>
+      <version>2.0-m4</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's JSF implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-jsf</artifactId>
+      <version>1.0-m3</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's JSF implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-jsf</artifactId>
+      <version>1.0-m2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's JSF implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-core</artifactId>
+      <version>2.0-m5</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a backend (Managers, DAOs and Web Services)
+        application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-tapestry</artifactId>
+      <version>2.0-m5</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-tapestry</artifactId>
+      <version>2.0-m4</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-tapestry</artifactId>
+      <version>1.0-m3</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-tapestry</artifactId>
+      <version>1.0-m2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-struts</artifactId>
+      <version>2.0-m5</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-struts</artifactId>
+      <version>2.0-m4</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-struts</artifactId>
+      <version>1.0-m3</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-struts</artifactId>
+      <version>1.0-m2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-spring</artifactId>
+      <version>2.0-m5</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-spring</artifactId>
+      <version>2.0-m4</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-spring</artifactId>
+      <version>1.0-m3</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-spring</artifactId>
+      <version>1.0-m2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-jsf</artifactId>
+      <version>2.0-m5</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-jsf</artifactId>
+      <version>2.0-m4</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-jsf</artifactId>
+      <version>1.0-m3</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-jsf</artifactId>
+      <version>1.0-m2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-spring-archetype</artifactId>
+      <version>2.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-jsf-archetype</artifactId>
+      <version>2.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-tapestry-archetype</artifactId>
+      <version>2.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-struts-archetype</artifactId>
+      <version>2.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-jsf-archetype</artifactId>
+      <version>2.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-core-archetype</artifactId>
+      <version>2.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-tapestry-archetype</artifactId>
+      <version>2.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-spring-archetype</artifactId>
+      <version>2.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-struts-archetype</artifactId>
+      <version>2.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-ws-archetype</artifactId>
+      <version>2.2</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-spring-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-jsf-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-tapestry-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-struts-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-jsf-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-core-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-tapestry-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-struts-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-ws-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-spring-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-freemarker-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-security-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-tapestry-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-stripes-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-struts-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-wicket-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-jsf-archetype</artifactId>
+      <version>2.2.1</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>sonatype-training-archetype</artifactId>
+      <version>1.9-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>gwt-mvc</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-tapestry-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-tapestry</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Tapestry implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-struts-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-struts</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Struts implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-spring-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-spring</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Spring MVC implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-jsf-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-jsf</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's JSF implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-wicket-archetype</artifactId>
+      <version>2.2.1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-wicket-archetype</artifactId>
+      <version>2.1.0-M2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-wicket-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-tapestry-archetype</artifactId>
+      <version>2.2.1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-tapestry-archetype</artifactId>
+      <version>2.1.0-M2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-tapestry-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-struts-archetype</artifactId>
+      <version>2.2.1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-struts-archetype</artifactId>
+      <version>2.1.0-M2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-struts-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-stripes-archetype</artifactId>
+      <version>2.2.1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-stripes-archetype</artifactId>
+      <version>2.1.0-M2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-stripes-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-security-archetype</artifactId>
+      <version>2.2.1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-security-archetype</artifactId>
+      <version>2.1.0-M2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-security-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-freemarker-archetype</artifactId>
+      <version>2.2.1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-freemarker-archetype</artifactId>
+      <version>2.1.0-M2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-freemarker-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-archetype</artifactId>
+      <version>2.2.1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-archetype</artifactId>
+      <version>2.1.0-M2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-jsf-archetype</artifactId>
+      <version>2.2.1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-jsf-archetype</artifactId>
+      <version>2.1.0-M2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-jsf-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-core-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-core</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a backend (Managers, DAOs and Web Services)
+        application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-tapestry-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-tapestry</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 project that creates the AppFuse Basic Tapestry Archetype.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-struts-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-struts</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 project that creates the AppFuse Basic Struts Archetype.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-spring-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-spring</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 project that creates the AppFuse Basic Spring Archetype.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-jsf-archetype</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-jsf</artifactId>
+      <version>2.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 project that creates the AppFuse Basic JSF Archetype.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-tapestry</artifactId>
+      <version>2.0-rc1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Tapestry implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-tapestry</artifactId>
+      <version>1.0-m4-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Tapestry implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-tapestry</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Tapestry implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-struts</artifactId>
+      <version>2.0-rc1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Struts implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-struts</artifactId>
+      <version>1.0-m4-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Struts implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-struts</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Struts implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-spring</artifactId>
+      <version>2.0-rc1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Spring MVC implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-spring</artifactId>
+      <version>1.0-m4-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Spring MVC implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-spring</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's Spring MVC implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-jsf</artifactId>
+      <version>2.0-rc1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's JSF implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-jsf</artifactId>
+      <version>1.0-m4-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's JSF implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-modular-jsf</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as AppFuse's JSF implementation.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-core</artifactId>
+      <version>2.0-rc1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a backend (Managers, DAOs and Web Services)
+        application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-tapestry</artifactId>
+      <version>2.0-rc1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-tapestry</artifactId>
+      <version>1.0-m4-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-tapestry</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-struts</artifactId>
+      <version>2.0-rc1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-struts</artifactId>
+      <version>1.0-m4-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-struts</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-spring</artifactId>
+      <version>2.0-rc1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-spring</artifactId>
+      <version>1.0-m4-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-spring</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-jsf</artifactId>
+      <version>2.0-rc1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-jsf</artifactId>
+      <version>1.0-m4-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-basic-jsf</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-archetype-modular</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a modular web application with AppFuse. This archetype creates two modules:
+        "core" and "web". The core module depends on appfuse-service, while the web module depends on core as well
+        as one of AppFuse's supported web frameworks (JSF, Spring MVC, Struts 2 or Tapestry).</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-archetype-basic</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>Maven 2 archetype that creates a web application with AppFuse embedded in it.</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-core-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-jsf-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-spring-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-struts-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-tapestry-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-jsf-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-struts-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-spring-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-tapestry-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-ws-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-jsf-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-freemarker-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-security-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-stripes-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-struts-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-tapestry-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-wicket-archetype</artifactId>
+      <version>2.1.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-jsf-archetype</artifactId>
+      <version>2.3-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-core-archetype</artifactId>
+      <version>2.3-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-tapestry-archetype</artifactId>
+      <version>2.3-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-spring-archetype</artifactId>
+      <version>2.3-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-struts-archetype</artifactId>
+      <version>2.3-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-jsf-archetype</artifactId>
+      <version>2.3-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-tapestry-archetype</artifactId>
+      <version>2.3-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-struts-archetype</artifactId>
+      <version>2.3-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-spring-archetype</artifactId>
+      <version>2.3-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-ws-archetype</artifactId>
+      <version>2.3-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-freemarker-archetype</artifactId>
+      <version>2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-archetype</artifactId>
+      <version>2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-jsf-archetype</artifactId>
+      <version>2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-security-archetype</artifactId>
+      <version>2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-tapestry-archetype</artifactId>
+      <version>2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-stripes-archetype</artifactId>
+      <version>2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-struts-archetype</artifactId>
+      <version>2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-wicket-archetype</artifactId>
+      <version>2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-jsf-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-freemarker-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-security-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-stripes-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-spring-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-tapestry-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-struts-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-light-wicket-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-jsf-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-core-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-tapestry-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-spring-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-struts-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-wicket-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-tapestry-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-struts-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-spring-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-jsf-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-wicket-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-ws-archetype</artifactId>
+      <version>2.2.2-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-jsf-archetype</artifactId>
+      <version>3.0.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-core-archetype</artifactId>
+      <version>3.0.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-tapestry-archetype</artifactId>
+      <version>3.0.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-spring-archetype</artifactId>
+      <version>3.0.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-wicket-archetype</artifactId>
+      <version>3.0.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-basic-struts-archetype</artifactId>
+      <version>3.0.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-tapestry-archetype</artifactId>
+      <version>3.0.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-struts-archetype</artifactId>
+      <version>3.0.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-spring-archetype</artifactId>
+      <version>3.0.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-jsf-archetype</artifactId>
+      <version>3.0.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-modular-wicket-archetype</artifactId>
+      <version>3.0.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+      <description>AppFuse Archetype</description>
+    </archetype>
+    <archetype>
+      <groupId>org.appfuse.archetypes</groupId>
+      <artifactId>appfuse-ws-archetype</artifactId>
+      <version>3.0.1-SNAPSHOT</version>
+      <repository>https://oss.sonatype.org/content/groups/appfuse</repository>
+    </archetype>
+  </archetypes>
+</archetype-catalog>

@@ -1,0 +1,109 @@
+def projectVersion =  '0.1.4-SNAPSHOT'
+
+buildscript {
+	ext {
+		springBootVersion = '1.5.6.RELEASE'
+	}
+	ext.mavenCrevdentials = {
+		username "$repo2User"
+		password "$repo2Pass"
+	}
+	ext.repos = {
+		mavenLocal()
+		mavenCentral()
+		// Needed for sonarqube gradle plugin
+		maven { url "https://plugins.gradle.org/m2/" }
+		// Needed for spring-multitenant-datasource-config
+		maven { url "https://dl.bintray.com/imtiaz-rahi/maven-repo"  }
+		maven {
+			credentials mavenCrevdentials
+			url "$repo2Releases"
+		}
+		maven {
+			credentials mavenCrevdentials
+			url "$repo2Snapshots"
+		}
+		// needed for metafour commons, validator etc.
+		maven {
+			credentials mavenCrevdentials
+			url "https://repo2.metafour.com/repository/repo1-releases/" 
+		}
+	}
+
+	repositories repos
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath('org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.2')
+		classpath('io.franzbecker:gradle-lombok:1.10')
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+eclipse { classpath { downloadSources = true } }
+idea { module { downloadSources = true } }
+
+if (JavaVersion.current().isJava8Compatible()) {
+	allprojects {
+		tasks.withType(Javadoc) { options.addStringOption('Xdoclint:none', '-quiet') }
+	}
+}
+
+subprojects {
+	group = 'com.metafour'
+	version = "${projectVersion}"
+
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+	apply plugin: 'idea'
+	apply plugin: 'org.springframework.boot'
+	apply plugin: 'jacoco'
+	apply plugin: 'org.sonarqube'
+	apply plugin: 'io.franzbecker.gradle-lombok'
+	apply plugin: 'maven-publish'
+
+	repositories repos
+	bootRepackage { enabled = false }
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+	
+	dependencyManagement {
+		imports {
+			mavenBom "org.springframework.boot:spring-boot-dependencies:${springBootVersion}"
+			mavenBom "org.springframework.cloud:spring-cloud-dependencies:Finchley.RELEASE"
+		}
+	}
+
+	task sourcesJar(type: Jar) { 
+		classifier 'sources'
+		from sourceSets.main.output
+	}
+	task javadocJar(type: Jar) { 
+		from javadoc
+		classifier 'javadoc'
+	}
+	task testJar(type: Jar) { 
+		from sourceSets.test.output
+		classifier 'tests'
+	}
+
+	publishing {
+		publications {
+			mavenJava(MavenPublication) {
+				from components.java
+				afterEvaluate { artifactId = jar.baseName }
+				artifact sourcesJar
+				artifact javadocJar
+				artifact testJar
+			}
+		}
+		repositories {
+			maven {
+				url = version.endsWith('SNAPSHOT') ? "$repo2Snapshots" : "$repo2Releases"
+				credentials mavenCrevdentials
+			}
+		}
+	}
+}

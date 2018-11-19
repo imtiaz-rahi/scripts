@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-catalog>
+  <archetypes>
+    <archetype>
+      <groupId>com.lordofthejars.thymeleafarchetype</groupId>
+      <artifactId>thymeleaf-spring-maven-archetype</artifactId>
+      <version>1.0.0</version>
+      <repository></repository>
+    </archetype>
+  </archetypes>
+</archetype-catalog>

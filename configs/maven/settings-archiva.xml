@@ -1,0 +1,10 @@
+<settings>
+	<mirrors>
+		<mirror>
+			<id>archiva.default</id>
+			<url>http://repo1.maven.metafour.lan:8080/archiva/repository/internal/</url>
+			<mirrorOf>*</mirrorOf>
+		</mirror>
+	</mirrors>
+</settings>
+

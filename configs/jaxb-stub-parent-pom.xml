@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>jaxws-stub-parent</artifactId>
+	<version>1.1.2</version>
+	<packaging>pom</packaging>
+	<name>jaxws-stub-parent</name>
+	<description>Parent POM for web service client stub based on WSDL or Schema</description>
+	<properties>
+		<java.version>1.7</java.version>
+		<generated.sources>${project.build.directory}/generated-sources</generated.sources>
+		<resources.directory>${basedir}/src/main/resources</resources.directory>
+		<metainf.directory>${project.build.resources[0].directory}/META-INF</metainf.directory>
+		<wsdl.directory>${metainf.directory}/wsdl</wsdl.directory>
+		<schema.directory>${metainf.directory}/schemas</schema.directory>
+		<jaxb2-basics.version>0.11.1</jaxb2-basics.version>
+	</properties>
+
+	<!-- http://books.sonatype.com/mvnref-book/reference/profiles-sect-maven-profiles.html -->
+	<profiles>
+		<profile>
+			<id>jdk8</id>
+			<activation>
+				<jdk>[1.8,)</jdk>
+			</activation>
+			<properties>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>properties-maven-plugin</artifactId>
+						<version>1.0.0</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>set-system-properties</goal>
+								</goals>
+								<configuration>
+									<properties>
+										<property>
+											<name>javax.xml.accessExternalSchema</name>
+											<value>all</value>
+										</property>
+									</properties>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>jdk6</id>
+			<activation>
+				<jdk>1.6</jdk>
+			</activation>
+			<properties>
+				<endorsed.directory>${project.build.directory}/endorsed</endorsed.directory>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-dependency-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>validate</phase>
+								<goals>
+									<goal>copy</goal>
+								</goals>
+								<configuration>
+									<outputDirectory>${endorsed.directory}</outputDirectory>
+									<silent>true</silent>
+									<!-- need JAXB API and JAX-WS API in an endorsed dir -->
+									<artifactItems>
+										<artifactItem>
+											<groupId>javax.xml.bind</groupId>
+											<artifactId>jaxb-api</artifactId>
+											<version>2.2.6</version>
+											<type>jar</type>
+										</artifactItem>
+										<artifactItem>
+											<groupId>javax.xml.ws</groupId>
+											<artifactId>jaxws-api</artifactId>
+											<version>2.2.7</version>
+											<type>jar</type>
+										</artifactItem>
+									</artifactItems>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<configuration>
+							<source>1.6</source>
+							<target>1.6</target>
+							<compilerArguments>
+								<endorseddirs>${endorsed.directory}</endorseddirs>
+							</compilerArguments>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.metafour</groupId>
+			<artifactId>metafour-commons</artifactId>
+			<version>1.1.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.jvnet.jaxb2_commons</groupId>
+				<artifactId>jaxb2-basics-runtime</artifactId>
+				<version>${jaxb2-basics.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<!-- JAX-WS Maven Plugin (MojoHaus): http://www.mojohaus.org/jaxws-maven-plugin -->
+					<!-- Usage: travelport-uapi-stub -->
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>jaxws-maven-plugin</artifactId>
+					<version>2.4.1</version>
+					<executions>
+						<execution>
+							<id>wsimport</id>
+							<phase>generate-sources</phase>
+							<goals>
+								<goal>wsimport</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<wsdlDirectory>${wsdl.directory}</wsdlDirectory>
+						<!-- NOTE: External binding files cannot be used if asterisk notation is in place -->
+						<!-- <wsdlLocation>http://localhost/wsdl/*</wsdlLocation> -->
+						<sourceDestDir>${generated.sources}</sourceDestDir>
+						<verbose>true</verbose>
+						<extension>true</extension>
+						<catalog>${metainf.directory}/jax-ws-catalog.xml</catalog>
+						<vmArgs>
+							<vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+						</vmArgs>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<!-- JAX-WS Maven Plugin (2.x): https://jax-ws-commons.java.net/jaxws-maven-plugin -->
+					<!-- itrak-link-stub, gls-ship-stub, ukmail-ship-stub, ups-ship-stub, alliedexpress-stub, emirates-ubookservice-stub -->
+					<groupId>org.jvnet.jax-ws-commons</groupId>
+					<artifactId>jaxws-maven-plugin</artifactId>
+					<version>2.3.1-b20150201.1248</version>
+					<executions>
+						<execution>
+							<id>wsimport</id>
+							<phase>generate-sources</phase>
+							<goals>
+								<goal>wsimport</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<wsdlDirectory>${wsdl.directory}</wsdlDirectory>
+						<!-- NOTE: External binding files cannot be used if asterisk notation is in place -->
+						<!-- <wsdlLocation>http://localhost/wsdl/*</wsdlLocation> -->
+						<sourceDestDir>${generated.sources}</sourceDestDir>
+						<skip>false</skip>
+						<verbose>true</verbose>
+						<catalog>${metainf.directory}/jax-ws-catalog.xml</catalog>
+						<vmArgs>
+							<vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+						</vmArgs>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<!-- JAXB2 Maven Plugin (Oracle): http://www.mojohaus.org/jaxb2-maven-plugin/Documentation/v2.2/ -->
+					<!-- nclegacy-stub, galaxy-client-api, dhl-ship-stub, tnt-ship-stub -->
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>jaxb2-maven-plugin</artifactId>
+					<version>2.2</version>
+					<executions>
+						<execution>
+							<phase>generate-sources</phase>
+							<goals>
+								<goal>xjc</goal>
+							</goals>
+						</execution>
+					</executions>
+					<!-- http://www.mojohaus.org/jaxb2-maven-plugin/Documentation/v2.2/xjc-mojo.html -->
+					<configuration>
+						<outputDirectory>${generated.sources}</outputDirectory>
+						<noGeneratedHeaderComments>true</noGeneratedHeaderComments>
+						<extension>true</extension>
+						<failOnNoSchemas>false</failOnNoSchemas>
+						<sources>
+							<source>${schema.directory}</source>
+						</sources>
+						<xjbSources>
+							<xjbSource>${schema.directory}</xjbSource>
+						</xjbSources>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<!-- JAXB2 Maven Plugin (Highsource): https://github.com/highsource/maven-jaxb2-plugin -->
+					<!-- Usage: multicom-fab-stub -->
+					<groupId>org.jvnet.jaxb2.maven2</groupId>
+					<artifactId>maven-jaxb2-plugin</artifactId>
+					<version>0.13.1</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>generate</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<generateDirectory>${generated.sources}</generateDirectory>
+						<schemaDirectory>${schema.directory}</schemaDirectory>
+						<schemaExcludes>
+							<schemaExclude>*.wsdl</schemaExclude>
+							<schemaExclude>*.xsl</schemaExclude>
+						</schemaExcludes>
+						<bindingDirectory>${metainf.directory}</bindingDirectory>
+						<noFileHeader>true</noFileHeader>
+						<cleanPackageDirectories>true</cleanPackageDirectories>
+						<extension>true</extension>
+						<verbose>false</verbose>
+						<plugins>
+							<!-- http://confluence.highsource.org/display/J2B/Home -->
+							<plugin>
+								<groupId>org.jvnet.jaxb2_commons</groupId>
+								<artifactId>jaxb2-basics</artifactId>
+								<version>${jaxb2-basics.version}</version>
+							</plugin>
+						</plugins>
+						<args>
+							<arg>-XtoString</arg>
+							<arg>-Xequals</arg>
+							<arg>-XhashCode</arg>
+							<arg>-Xcopyable</arg>
+						</args>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>build-helper-maven-plugin</artifactId>
+					<version>3.0.0</version>
+					<configuration>
+						<sources>
+							<source>${generated.sources}</source>
+						</sources>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>xml-maven-plugin</artifactId>
+					<version>1.0.1</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<!-- <executions> -->
+				<!-- generate-sources: with JAXWS source generation (wsimport) -->
+				<!-- <execution><phase>generate-sources</phase><goals><goal>add-source</goal></goals></execution> -->
+
+				<!-- process-sources: with JAXB source generation (xjc) -->
+				<!-- <execution><phase>process-sources</phase><goals><goal>add-source</goal></goals></execution> -->
+				<!-- </executions> -->
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<scm>
+		<developerConnection>scm:git:git://github.com/metafour-int/${project.artifactId}.git</developerConnection>
+		<connection>scm:git:git://github.com/metafour-int/jaxws-stub-parent.git</connection>
+		<url>https://github.com/metafour-int/jaxws-stub-parent</url>
+	</scm>
+	<developers>
+		<developer>
+			<id>imtiaz</id>
+			<name>Imtiaz Rahi</name>
+			<email>imtiaz@metafour.com</email>
+			<url>https://github.com/imtiaz-m4</url>
+			<roles>
+				<role>developer</role>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+	</developers>
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/imtiaz-m4/jaxws-stub-parent/issues</url>
+	</issueManagement>
+	<parent>
+		<groupId>com.metafour.maven</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.1.1</version>
+		<relativePath>../maven-parent/</relativePath>
+	</parent>
+</project>

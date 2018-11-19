@@ -1,0 +1,109 @@
+version: '2'
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+    restart: always
+    labels:
+      - "com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy=true"
+    ports:
+      - ${empowerHubPort}:80
+      - ${empowerHubPortHTTPS}:443
+    volumes:
+      - /path/to/certs:/etc/nginx/certs:ro
+      - /etc/nginx/vhost.d
+      - /usr/share/nginx/html
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    environment:
+      - DEFAULT_HOST=${empowerHubHost}
+
+  letsencrypt-nginx-proxy-companion:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    restart: always
+    volumes:
+      - /path/to/certs:/etc/nginx/certs:rw
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    volumes_from:
+      - nginx-proxy
+
+  db:
+    image: postgres
+    container_name: db
+    restart: always
+    ports:
+      - 5432
+    volumes:
+      - /data
+    environment:
+      - PGDATA=/data
+      - POSTGRES_DB=emphub
+      - POSTGRES_USER=emphubuser
+      - POSTGRES_PASSWORD=emphubpass
+
+  # scaling up: docker-compose scale redis=N
+  # TODO: redis cluster
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - 6379
+    volumes:
+      - /data
+
+  redis-commander:
+    image: tenstartups/redis-commander
+    container_name: redis-commander
+    restart: always
+    command: --redis-host redis
+    links:
+      - redis:redis
+      - nginx-proxy
+    ports:
+      - 8081
+    environment:
+      - VIRTUAL_HOST=redis-commander.${empowerHubHost}
+      - VIRTUAL_PORT=8081
+
+  elk:
+    image: ${coreProject.group}/elk:${coreProject.version}
+    container_name: elk
+    restart: always
+    ports:
+      - 80
+      - 9200
+      - 5514/udp
+      - 4560
+    environment:
+      - VIRTUAL_HOST=elk.${empowerHubHost}
+      - VIRTUAL_PORT=80
+      
+  registry:
+    image: ${registryProject.group}/${registryProject.name}:${registryProject.version}
+    container_name: registry
+    restart: always
+    ports:
+      - ${registryProject.registryPort}
+    links:
+      - elk
+    environment:
+      - VIRTUAL_HOST=registry.${empowerHubHost}
+      - VIRTUAL_PORT=1111
+      
+  core:
+    image: ${coreProject.group}/${coreProject.name}:${coreProject.version}
+    container_name: core
+    restart: always
+    ports:
+      - ${coreProject.corePort}
+      - 5005:5005
+    links:
+      - registry
+      - db
+      - elk
+      - nginx-proxy
+    environment:
+      - VIRTUAL_HOST=${empowerHubHost}
+      - VIRTUAL_PORT=2222
+      - LETSENCRYPT_HOST=hub.365technology.com
+      - LETSENCRYPT_EMAIL=noor.siddique@metafour.com
+      

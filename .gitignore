@@ -18,3 +18,8 @@ nytprof.out
 *.o
 *.bs
 /_eumm/
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db

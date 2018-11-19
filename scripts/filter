@@ -1,0 +1,22 @@
+#!/bin/sh
+# Name     : filter
+# Version  : 1.1
+# Author   : A.W. Love
+# Date     : August 1989
+# Function : Filter named file(s) of special characters.
+# Notes    : Deletes non-printable characters in the ascii range
+#            1 - 8, 11 - 31 and 127 (includes CR) (i.e. leaves only HT and LF).
+# ChangeLog:
+#   Rob Udwin   02-04-1996 : Three passes for DEC Unix    
+#   Imtiaz Rahi 29-10-2003 : Modified it to use in Expotel system.
+
+while [ $# != 0 ]; do
+  tr -d "\000-\010" < $1      > /tmp/$$1.tmp
+  echo $$1.tmp
+  tr -d "\015-\037" < /tmp/$$1.tmp > /tmp/$$2.tmp
+  tr -d "\177"      < /tmp/$$2.tmp > /tmp/$$3.tmp
+  mv /tmp/$$3.tmp $1
+  rm -f /tmp/$$1.tmp /tmp/$$2.tmp
+  shift
+done
+

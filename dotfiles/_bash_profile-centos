@@ -1,0 +1,18 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+if [ -f ~/.ssh-agent-setup ]; then . ~/.ssh-agent-setup; fi
+#if [ -z "$SSH_AUTH_SOCK" ] ; then eval `ssh-agent -t 3600 -s`; ssh-add; fi
+umask 022
+
+HNAME=`hostname -s`
+if [ $HNAME = "eoapps-prest" ]; then export PGHOST=eopgdb-prest; fi
+if [ $HNAME = "eoapps-fjones" ]; then export PGHOST=eopgdb-fjones; fi
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+export PATH

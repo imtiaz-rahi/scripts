@@ -1,0 +1,111 @@
+eval $(ssh-agent -s)
+
+# switch to a particular release branch
+cvs up -r release-1-9-59-dev -AdP
+# cvs command to check out particular release branch/release/version of empower
+cvs -d cvs.m4.net:/cvs/empower co -r release-1-9-59-dev -d empower-phoenix-rel empower
+
+cvs -d cvs.m4.net:/cvs/empower co -r release-1-9-81-netc-dev -d empower-netcourier empower
+
+# branching
+cvs -d cvs.m4.net:/cvs/expotel rtag -r meta4-release-02-0008-01 -b m4-rel-02-maintain ews
+
+# Switch working directory to different version / branch
+cvs update -r "<branch_verison>" -d -P
+
+# Create patch
+cvs -d cvs.m4.net:/cvs/empower rdiff -u -r rel-1-tostring -r rel-1 testtube/HolidayBrokers > ws-tostring.patch
+
+http://www.thegeekstuff.com/2009/05/15-advanced-postgresql-commands-with-examples/
+http://www.thegeekstuff.com/2009/04/15-practical-postgresql-database-adminstration-commands/
+
+boolean searchHC = expReqRootE.elementText("search_hotel_connect").toLowerCase() == "true" ? true : false;
+
+# MF Asia Network information (ISP) on gateway.bd
+eth1	telnet  IP: 120.50.2.238,  mask: 255.255.255.252, gw: 120.50.2.237
+eth2	drik    IP: 103.10.55.138, mask: 255.255.255.248, gw: 103.10.55.137
+
+psql -d beancounter -t -A -F"," \
+                -c "select date, symbol, day_close " \
+                   "from stockprices where symbol like 'I%' " \
+                   "and date >= '2009-10-02'"
+Copy (Select * From foo) To '/tmp/test.csv' With CSV;
+COPY (SELECT foo, bar FROM baz) TO '/tmp/query.csv' (format csv, delimiter ';')
+
+rpm2cpio httpd-2.2.3-31.el5_4.2.x86_64.rpm | cpio -idmv
+
+perl -e 'foreach (@INC){ system("find $_ -name *.pm") }'
+rpm -q --whatprovides 'perl(URI::Escape)'
+sudo yum whatprovides "perl(URI::Escape)"
+
+INSERT INTO customer (name,agreement,last_update) VALUES ('Netcourier CMS',1,now());
+
+# The sure-fire way to find duplicate files is by comparing MD5 hashes. This compares only the first 20 characters of the md5sum, 
+# but it still takes a long time. It's the most accurate method, so I don't mind the wait:
+$ find . -type f -exec md5sum '{}' ';' | sort | uniq --all-repeated=separate -w 20
+
+# You can also compare file sizes, which is a little less accurate but a lot faster:
+$ find . -type f -printf "%p - %s" | sort -nr -k3 | uniq -D -f1
+
+# Validate schema and XML
+xmllint --noout --schema read-country-rs.xsd read_country-1-rs.xml
+
+# openSUSE supported method of repo use for Tumbleweed is to have only the main repos (Oss, Non-oss, and Update) and the Tumbleweed repo active
+$ sudo zypper dup
+#will update your packages, and if any packages are ever reverted from Tumbleweed zypper dup will also handle that.
+
+# Despite it being unsupported, if you do choose to have other repos enabled, this command is safer:
+sudo zypper dup --from Tumbleweed
+
+postgres@server$ psql beachcomber -c "COPY location to '/var/lib/pgsql/locations.csv' DELIMITER ',' CSV header"
+
+grep -ian "\[bo\.CHNG\]" EM*.INC EM*.DTS
+
+
+curl -i -X POST -H 'Content-Type:application/json' -d @mazhar.json  http://localhost:8080/visitor/
+curl -i -X GET -H 'Content-Type:application/json' http://localhost:8080/visitor/2
+curl -v --resolve www.tucantravel.com:443:178.17.33.228 https://www.tucantravel.com/
+
+# Check Top Processes sorted by RAM or CPU Usage in Linux
+# http://www.tecmint.com/find-linux-processes-memory-ram-cpu-usage
+ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head
+
+
+# git Discard local changes
+git checkout .		- Removes Unstaged Tracked files ONLY [Type 2]
+git clean -f		- Removes Unstaged UnTracked files ONLY [Type 3]
+git reset --hard	- Removes Staged Tracked and UnStaged Tracked files ONLY[Type 1, Type 2]
+git stash -u		- Removes all changes [Type 1, Type 2, Type 3]
+
+awk -v cmd='openssl x509 -noout -subject' '/BEGIN/{close(cmd)};{print | cmd}' < /etc/ssl/certs/ca-certificates.crt
+
+# Change version string in all POM files in submodules
+find ./ -name pom.xml -exec sed -i -e 's/0.1.6/0.1.7-SNAPSHOT/' {} \;
+# Sign commit with gpg
+git commit --gpg-sign=3A7D5A6732619BB7 -s -m "POMs updated. trying out release plugin. Closes #4."
+git tag --sign -m "Some specific release tag" v0.1.7
+
+## Docker
+docker stack deploy -c docker-stack-haproxy.yml haproxy
+docker service ps haproxy_haproxy
+docker stack ls
+docker service ls
+docker node ls
+# view docker service(stack) logs
+docker service logs -tf haproxy_haproxy --since 1s
+
+##
+vzctl stop ctid
+vzmigrate --remove-area no --keep-dst -vvv <destinationHN> <vpsid>
+for ct in `sudo vzlist -aH -o ctid`; do sudo vzctl set $ct --searchdomain metafour.lan --save; done
+
+## Create folder in destination HN first
+rsync -av --numeric-ids --delete /vz/private/ctid/ desthn:/vz/private/ctid/
+## Copy over the vz config file
+
+
+sudo runuser -u apache /scripts/eminvc.sh EMB01 PDF FJ004318 manik@metafour.com ADMIN /scripts/emb01_e2_invoice.cfg
+
+#nagios-passive login
+ssh ec2-user@10.0.3.46
+

@@ -1,0 +1,70 @@
+web.xml
+mvc-dispatcher-servlet.xml
+servlet-context.xml
+log4j.xml
+
+*.properties
+!messages*.properties
+!*-sample.properties
+!*.properties.sample
+
+*.yml
+!*-sample.yml
+
+# https://github.com/github/gitignore/blob/master/Java.gitignore
+*.jpage
+*.jar
+*.war
+*.ear
+hs_err_pid*
+.attach_pid*
+
+# Build tool
+bin/
+/dist/
+# https://github.com/github/gitignore/blob/master/Maven.gitignore
+build/
+log/
+/target/
+# https://github.com/github/gitignore/blob/master/Gradle.gitignore
+/gradle/
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# Eclipse
+/.classpath
+/.project
+/.settings/
+/.springBeans
+# IntelliJ IDEA [http://gary-rowe.com/agilestack/2012/10/12/a-gitignore-file-for-intellij-and-eclipse-with-maven]
+/.idea/
+*.iml
+*.iws
+*.ipr
+.tern-project
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Android [https://github.com/github/gitignore/blob/master/Android.gitignore]
+*.apk
+*.ap_
+*.dex
+*.class
+*.log
+gen/
+/*/build/
+proguard/
+
+# Android Studio [https://github.com/github/gitignore/blob/master/Android.gitignore]
+captures/
+.navigation/
+.signing/
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties

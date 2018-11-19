@@ -1,0 +1,12 @@
+<settings>
+	<mirrors>
+		<mirror>
+			<!--This sends everything else to /public -->
+			<id>nexus</id>
+			<mirrorOf>*</mirrorOf>
+			<url>http://repo1.maven.metafour.lan:8081/nexus/content/groups/public/
+			</url>
+		</mirror>
+	</mirrors>
+</settings>
+
